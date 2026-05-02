@@ -8,7 +8,12 @@ const noticeSchema = new Schema(
         notiType: {
             type: String,
             default: "alert",
-            enum: ["alert", "message"],
+            enum: ["alert", "message", "invitation"],
+        },
+        status: {
+            type: String,
+            default: "pending",
+            enum: ["pending", "accepted", "rejected"],
         },
         isRead: [{ type: Schema.Types.ObjectId, ref: "User" }],
     },

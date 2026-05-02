@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { Link, useLocation } from "react-router-dom"
 import { setOpenSidebar, setOpenTaskModal } from "../redux/slices/authSlice"
 import clsx from "clsx"
-import { Layout, CheckCircle2, Clock, Users, Trash2, Settings, ListTodo } from "lucide-react"
+import { Layout, CheckCircle2, Clock, Users, Trash2, Settings, ListTodo, Briefcase } from "lucide-react"
 
 const linkData = [
     {
@@ -90,11 +90,11 @@ const Sidebar = () => {
     return (
         <div className="w-full h-full flex flex-col gap-8 p-6 bg-white dark:bg-slate-900 transition-colors">
             <Link to="/" className="flex gap-2 items-center px-2">
-                <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-primary/30">
-                    <Layout size={24} />
+                <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white shadow-lg">
+                    <Briefcase size={22} />
                 </div>
-                <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                    Ethara AI
+                <span className="text-xl font-black tracking-tight text-slate-800 dark:text-white uppercase">
+                    Ethara<span className="text-blue-600">Pro</span>
                 </span>
             </Link>
 
